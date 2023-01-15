@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block body_block %}
+
+
+<div class="row">
+    <div class="col-sm-8 offset-2">
+        <h3 class="text-center alert alert-info">Update Student Info.</h3>
+        <form action="" method="post">
+            {{form.as_p}}
+            {%csrf_token%}
+            <input type="submit" class="btn btn-success" value="Update">
+            <a href="{% url 'addandshow' %}" class="btn btn-info">Back to Home</a>
+        </form>
+    </div>
+</div>
+{% endblock %}
